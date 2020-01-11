@@ -7,12 +7,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      home: Container(
-        color: Colors.teal,
-
-        child: Row(
+      home: Scaffold(
+        backgroundColor: Colors.teal,
+        body: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisSize: MainAxisSize.max,
           children: <Widget>[
             MyBox(),
             MyBox(),
@@ -28,12 +28,12 @@ class MyApp extends StatelessWidget {
 class MyBox extends StatelessWidget {
   final color;
 
-  const MyBox({this.color=Colors.white});
+  const MyBox({this.color = Colors.white});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-//      color: Colors.grey,
+      color: Colors.grey,
       padding: EdgeInsets.all(5),
       child: Icon(
         Icons.apps,
@@ -49,14 +49,18 @@ class Square extends StatelessWidget {
   final size;
 
   Square({this.color = Colors.black, this.size = 50.0});
+
   @override
   Widget build(BuildContext context) {
     return Container(
       width: size,
       height: size,
       color: color,
-      child: Icon(Icons.star, color: Colors.white, size: size,),
+      child: Icon(
+        Icons.star,
+        color: Colors.white,
+        size: size,
+      ),
     );
   }
 }
-
