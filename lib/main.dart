@@ -11,7 +11,8 @@ class MyApp extends StatelessWidget {
         color: Colors.teal,
 
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             MyBox(),
             MyBox(),
